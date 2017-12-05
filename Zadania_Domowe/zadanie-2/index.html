@@ -3,30 +3,37 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Formularz</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 
 <body>
 
-
-
     <form action="https://formspree.io/stan.pyrzanowski@gmail.com" method="POST">
 
-        <label for="name">Imię: </label><br />
+        <label for="name">imię:</label><br />
         <input type="text" name=“name” id="name" /><br />
-        <label for="surname">Nazwisko: </label><br />
+        <label for="surname">nazwisko:</label><br />
         <input type="text" name="name" id="surname" /><br />
-        <label for="email">Email Address: </label><br />
+        <label for="email">mail:</label><br />
         <input type="email" name="email" id="email" /><br />
-        <label for="telephone">Number Telefonu: </label><br />
+        <label for="telephone">telefon:</label><br />
         <input type="tel" name="usrtel" id="telephone" /> <br />
-        <label for="textarea">Wiadomość: </label><br />
+        <label for="wybor-miasta">wybór miasta:</label><br />
+        <select name="wybor-miasta">
+          <option value="Kraków">Kraków</option>
+          <option value="Warszawa">Warszawa</option>
+          <option value="Gdańsk">Gdańsk</option>     
+        </select><br />
+        <label for="gender">płeć:</label><br />
+        <input type="radio" name="gender" value="mężczyzna" checked> Male<br />
+        <input type="radio" name="gender" value="kobieta"> Female<br />
+        <label for="dane-osobowe">zgoda na dane osobowe:</label><br />
+        <input type="checkbox" name="dane-osobowe" value="tak">wyrażam zgodę<br />
+        <label for="textarea">wiadomość:</label><br />
         <textarea maxlength="1000" name="textarea" id="textarea"></textarea><br />
-        <input type="submit" value="Send">
+        <input type="submit" value="wyślij">
     </form>
-
-
 
 </body>
 
