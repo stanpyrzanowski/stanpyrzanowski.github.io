@@ -18,18 +18,18 @@
         <label for="email">mail:</label><br />
         <input type="email" name="Adres Email:" id="email" /><br />
         <label for="telephone">telefon:</label><br />
-        <input type="tel" name="Number Telefonu:" id="telephone" /> <br />
-        <label for="wybor-miasta">wybór miasta:</label><br />
-        <select name="Miasto:">
+        <input type="tel" name="Numer Telefonu:" id="telephone" /> <br />
+        <label for="miasto">wybór miasta:</label><br />
+        <select name="miasto:" id="miasto">
           <option value="Kraków">Kraków</option>
           <option value="Warszawa">Warszawa</option>
           <option value="Gdańsk">Gdańsk</option>     
         </select><br />
         <label for="gender">płeć:</label><br />
-        <input type="radio" name="Płeć:" value="mężczyzna" checked> Male<br />
-        <input type="radio" name="Płeć:" value="kobieta"> Female<br />
-        <label for="dane-osobowe">zgoda na dane osobowe:</label><br />
-        <input type="checkbox" name="Dane Osobowe:" value="tak">wyrażam zgodę<br />
+        <input type="radio" name="Płeć:" value="mężczyzna" id="gender">mężczyzna<br />
+        <input type="radio" name="Płeć:" value="kobieta" id="gender" checked>kobieta<br />
+        <label for="dataconsent">zgoda na dane osobowe:</label><br />
+        <input type="checkbox" name="Dane Osobowe:" value="tak" id="dataconsent">wyrażam zgodę<br />
         <label for="textarea">wiadomość:</label><br />
         <textarea maxlength="1000" name="Komentarz:" id="textarea"></textarea><br />
         <input type="submit" value="Wyślij">
