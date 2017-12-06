@@ -1,0 +1,102 @@
+#gray {
+    background-color: #eae3d2;
+    height: 620px;
+    width: 620px;
+    position: relative;    
+}
+#red, #blue, #green, #yellow, #black, #orange, #purple, #grey, #pink {
+    position: absolute;
+    height; 200px;
+    width: 200px;
+}
+#red {
+    background-color: red;
+    top: 5px;
+    bottom: 410px;
+    left: 5px;
+}
+#blue {
+    background-color: darkblue;
+    top: 5px;
+    bottom: 410px;
+    left: 210px;
+}
+#green {
+    background-color: darkgreen;
+    top: 5px;
+    bottom: 410px;
+    left: 415px;
+}
+#yellow {
+    background-color: yellow;
+    top: 215px;
+    bottom: 210px;
+    left: 5px;
+}
+#black {
+    background-color: black;
+    top: 215px;
+    bottom: 210px;
+    left: 210px;
+}
+#orange {
+    background-color: orange;
+    top: 215px;
+    bottom: 210px;
+    left: 415px;
+}
+#purple {
+    background-color: purple;
+    top: 415px;
+    bottom: 5px;
+    left: 5px;
+}
+#grey {
+    background-color: #4a4545;
+    top: 415px;
+    bottom: 5px;
+    left: 210px;
+}
+#pink {
+    background-color: pink;
+    top: 415px;
+    bottom: 5px;
+    left: 415px;
+}
+#pinkcircle, #greycircle, #purplecircle, #greencircle, #redcircle, #bluecircle, #orangecircle, #yellorcircle, #blackcircle {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    border: solid black 1px;
+    left: 25%;
+    transform: translateY(50%);
+}
+#pinkcircle {
+    background-color: pink;
+    
+}
+#greycircle {
+    background-color: dimgrey;
+}
+#purplecircle {
+    background-color: purple;
+}
+#greencircle {
+    background-color: darkgreen;
+}
+#redcircle {
+    background-color: red
+}
+#bluecircle {
+    background-color: blue;
+}
+#orangecircle {
+    background-color: orange;
+}
+#yellorcircle {
+    background-color: yellow;
+}
+#blackcircle {
+    background-color: black;
+}
