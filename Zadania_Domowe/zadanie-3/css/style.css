@@ -6,7 +6,7 @@
 }
 #red, #blue, #green, #yellow, #black, #orange, #purple, #grey, #pink {
     position: absolute;
-    height; 200px;
+    height: 200px;
     width: 200px;
 }
 #red {
