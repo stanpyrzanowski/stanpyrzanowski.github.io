@@ -29,19 +29,19 @@
 }
 #yellow {
     background-color: yellow;
-    top: 215px;
+    top: 210px;
     bottom: 210px;
     left: 5px;
 }
 #black {
     background-color: black;
-    top: 215px;
+    top: 210px;
     bottom: 210px;
     left: 210px;
 }
 #orange {
     background-color: orange;
-    top: 215px;
+    top: 210px;
     bottom: 210px;
     left: 415px;
 }
@@ -63,7 +63,7 @@
     bottom: 5px;
     left: 415px;
 }
-#pinkcircle, #greycircle, #purplecircle, #greencircle, #redcircle, #bluecircle, #orangecircle, #yellorcircle, #blackcircle {
+#pinkcircle, #greycircle, #purplecircle, #greencircle, #redcircle, #bluecircle, #orangecircle, #yellowcircle, #blackcircle {
     border-radius: 50%;
     height: 100px;
     width: 100px;
@@ -94,7 +94,7 @@
 #orangecircle {
     background-color: orange;
 }
-#yellorcircle {
+#yellowcircle {
     background-color: yellow;
 }
 #blackcircle {
