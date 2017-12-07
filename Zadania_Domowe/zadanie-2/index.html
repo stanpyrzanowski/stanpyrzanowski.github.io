@@ -8,35 +8,32 @@
 </head>
 
 <body>
-
     <form action="https://formspree.io/stan.pyrzanowski@gmail.com" method="POST">
-
         <label for="name">imi&#281;:</label><br />
-        <input type="text" name="Imię:" id="name" /><br />
+        <input type="text" name="name" id="name" /><br />
         <label for="surname">nazwisko:</label><br />
-        <input type="text" name="Nazwisko:" id="surname" /><br />
+        <input type="text" name="surname" id="surname" /><br />
         <label for="email">mail:</label><br />
-        <input type="email" name="Adres Email:" id="email" /><br />
+        <input type="email" name="email" id="email" /><br />
         <label for="telephone">telefon:</label><br />
-        <input type="tel" name="Numer Telefonu:" id="telephone" /> <br />
+        <input type="tel" name="telephone" id="telephone" /> <br />
         <label for="miasto">wybór miasta:</label><br />
-        <select name="Miasto:" id="miasto">
+        <select name="city" id="miasto">
           <option value="Kraków">Kraków</option>
           <option value="Warszawa">Warszawa</option>
           <option value="Gdańsk">Gdańsk</option>     
         </select><br />
         <p>wybierz płeć:</p>
-        <input type="radio" value="mężczyzna" name="Płeć:" id="mgender">
+        <input type="radio" value="mężczyzna" name="gender" id="mgender">
         <label for="mgender">mężczyzna</label><br />
-        <input type="radio" value="kobieta" name="Płeć:" id="fgender" checked>
+        <input type="radio" value="kobieta" name="gender" id="fgender" checked>
         <label for="fgender">kobieta</label><br /><br />
         <label for="dataconsent">zgoda na dane osobowe:</label><br />
-        <input type="checkbox" name="Dane Osobowe:" value="tak" id="dataconsent">wyrażam zgodę<br /><br />
+        <input type="checkbox" name="data-consent" value="tak" id="dataconsent">wyrażam zgodę<br /><br />
         <label for="textarea">wiadomość:</label><br />
-        <textarea maxlength="1000" name="Komentarz:" id="textarea"></textarea><br />
+        <textarea maxlength="1000" name="comment" id="textarea"></textarea><br />
         <input type="submit" value="Wyślij">
     </form>
-
 </body>
 
 </html>
