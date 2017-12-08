@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>A Simple Form</title>
+</head>
+
+<body>
+    <h1 id="heading">A Simple Form</h1>
+    <p><em>Form Fundamentals</em></p>
+
+    <form action="https://formspree.io/stan.pyrzanowski@gmail.com" method="POST" autocomplete="on">
+        <fieldset>
+            <legend>Customer Info</legend>
+            <label for="">Name:</label>
+            <input type="text" name="fname" placeholder="Enter your name" autofocus required><br /><br />
+            <label for="telephone">Telefon:</label>
+            <input type="tel" name="telephone" id="telephone" placeholder="Pattern: 1-234-567-8910" /><br /><br />
+            <label for="email">Email address:</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email address" /><br /><br />
+
+        </fieldset>
+        <fieldset>
+            <legend>Books</legend>
+            <input type="number" min="1" max="5" id="number" />
+            <label for="number">Quantity (Maximum 5):</label>
+            <select name="books" id="books">
+               <option></option>
+                <option value="Is it too much to ask">Is it too much to ask</option>
+                <option value="Hundred Years of Solitude">Hundred Years of Solitude</option>
+                <option value="The Shadow of the Wind">The Shadow of the Wind</option>
+                <option value="The Power of AttractionThe Power of Attraction">The Power of AttractionThe Power of Attraction</option>
+                <option value="Unleash the Power Within">Unleash the Power Within</option>
+            </select><br />
+
+        </fieldset>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
