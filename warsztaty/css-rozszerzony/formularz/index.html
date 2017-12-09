@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formularz</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <form action="https://formspree.io/stan.pyrzanowski@gmail.com" method="POST">
+        <label for="name">imi&#281;:</label>
+        <input type="text" name="name" id="name" />
+        <label for="surname">nazwisko:</label>
+        <input type="text" name="surname" id="surname" />
+        <label for="email">mail:</label>
+        <input type="email" name="email" id="email" />
+        <label for="telephone">telefon:</label>
+        <input type="tel" name="telephone" id="telephone" />
+        <label for="miasto">wybór miasta:</label>
+        <select name="city" id="miasto">
+            <option value="Kraków">Kraków</option>
+            <option value="Warszawa">Warszawa</option>
+            <option value="Gdańsk">Gdańsk</option>     
+        </select>
+        <label for="mgender" id="gender">wybierz płeć:</label>
+        <label for="mgender">mężczyzna</label>
+        <input type="radio" value="mężczyzna" name="gender" id="mgender" checked>
+        <label for="fgender">kobieta</label>
+        <input type="radio" value="kobieta" name="gender" id="fgender">
+        <label for="textarea">wiadomość:</label>
+        <textarea maxlength="1000" name="comment" id="textarea"></textarea>
+        <label for="dataconsent">wyrażam zgodę</label>
+        <input type="checkbox" name="data-consent" value="tak" id="dataconsent">
+        <input type="submit" value="Wyślij" id="submit">
+    </form>
+</body>
+
+</html>

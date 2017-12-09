@@ -1,0 +1,15 @@
+input[type="text"] {
+    background-color: blue;
+}
+div[suma~="2560"] {
+    color: brown;
+}
+div[detaliczny*="tak"] {
+    background-color: aqua;
+}
+p[class^="paragraf"] {
+    background-color: yellow;
+}
+div[suma$="60"]{
+    border: 3px solid black;
+}
