@@ -1,0 +1,29 @@
+#elementy-blokowe {
+    background-color: aqua;
+}
+#elementy-liniowe {
+    background-color: rosybrown;
+}
+#elementy-inline-block {
+    background-color: red;
+}
+#element-display-none {
+    background-color: chartreuse;
+}
+#elementy-blokowe #block-p1, block-p2 {
+    display: inline;
+}
+#elementy-liniowe #inline-p1, #inline-p2 {
+    display: block;
+}
+#elementy-inline-block>ul>li {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    border: 1px dotted #fff;
+    text-align: center;
+}
+#elementy-liniowe #element-display-none {
+    display: none;
+}
