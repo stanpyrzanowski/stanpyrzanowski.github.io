@@ -1,0 +1,10 @@
+.box {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    background-color: aqua;
+}
+#box-width {
+    background-color: red;
+    transition: 
+}

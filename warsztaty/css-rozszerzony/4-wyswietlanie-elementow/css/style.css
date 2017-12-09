@@ -10,7 +10,7 @@
 #element-display-none {
     background-color: chartreuse;
 }
-#elementy-blokowe #block-p1, block-p2 {
+#elementy-blokowe #block-p1, #block-p2 {
     display: inline;
 }
 #elementy-liniowe #inline-p1, #inline-p2 {
