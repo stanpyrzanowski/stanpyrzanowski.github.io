@@ -1,0 +1,12 @@
+#heading {
+    color: darkblue;
+}
+h1~p {
+    color: mediumpurple;
+}
+#namelabel, #tellabler, #emaillabel, #number {
+    margin-left: 50px;
+}
+#name, #email, #telephone, #number {
+    width: 350px;
+}
