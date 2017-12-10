@@ -1,0 +1,11 @@
+@media all and (min-width: 480px) and (max-width: 900px) {
+    .box {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .box {
+        width: 50%;
+    }
+}
