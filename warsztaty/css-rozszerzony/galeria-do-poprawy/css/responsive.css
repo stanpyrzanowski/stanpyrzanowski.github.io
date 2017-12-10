@@ -1,36 +1,56 @@
+#gallery {
+    width: 100%;
+
+/*
+}
 @media screen and (max-width: 480px){
-    .gallery {
-        width: 100%;
-    }
     figure {
         width: 100%;
         background-color: aqua;
     }
 }
 @media screen and (min-width: 481px) and (max-width: 768px){
-    .gallery {
-        width: 100%;
-    }
     figure {
         width: 90%;
         background-color: red;
     }
 }
 @media screen and (min-width: 769px) and (max-width: 992px) {
-    .gallery {
-        width: 100%;
-    }
     figure {
         width: 45%;
         background-color: blue;
     }
 }
 @media screen and (min-width: 993px) {
-    .gallery {
-        width: 100%;
-    }
     figure {
         width: 33%;
         background-color: grey;
     }
 }
+*/
+    
+    @media screen and (min-width: 993px) {
+        figure {
+            width: 33%;
+            background-color: red;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        figure {
+            width: 49%;
+            background-color: gray;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        figure {
+            width: 90%;
+            background-color: cadetblue;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        figure {
+            width: 100%;
+            background-color: red;
+        }
+    }
