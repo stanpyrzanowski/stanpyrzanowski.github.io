@@ -1,0 +1,81 @@
+#frame {
+    width: 510px;
+    height: 280px;
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    right 0;
+
+}
+/*
+#frame:before {
+    content: "";
+    width: 510px;
+    height: 280px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    right 0;
+}
+#frame:before:hover {
+    animation: animate 1s linear forwards;
+    @keyframes animate
+}
+#frame:after {
+    content: "";
+    width: 510px;
+    height: 280px;
+    border: solid 3px black;
+    margin: 0 auto;
+    position: absolute;
+}
+#frame:after:hover {
+    content: "";
+    width: 510px;
+    height: 280px;
+    border: solid 3px black;
+    margin: 0 auto;
+    position: absolute;
+}
+
+
+
+*/
+
+#frame > #photo {
+    width: 500px;
+    height: 270px;
+    background-image: url('../img/2-jezioro.jpg');
+    background-size: contain;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+#caption-frame {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+}
+#caption-frame:hover {
+    opacity: 0.9;
+    transition: 0.7s ease-in;
+}
+#lake {
+    color: white;
+    background-color: black;
+    font-family: serif;
+    font-size: 25px;
+    text-align: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    background-color: black;
+    opacity: 0.7;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
