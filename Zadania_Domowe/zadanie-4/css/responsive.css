@@ -1,0 +1,25 @@
+.gallery {
+    width: 100%;
+}
+@media screen and (max-width: 992px){
+    .gallery {
+        background-image: url("../img/man-1.jpg");
+        height: 50vh;
+        background-size: cover;      
+    }
+    .gallery > h1, h2 {
+        color: black;
+        top: 60vh;
+        text-align: center;
+    }
+}
+@media screen and (min-width: 993px) and (max-width: 1170px){
+    .gallery {
+        height: 70vh;
+        background-image: url("../img/man-2.jpg");
+        text-align: right;
+    }
+    .gallery > h1, h2 {
+        top: 20%;
+    }
+}
