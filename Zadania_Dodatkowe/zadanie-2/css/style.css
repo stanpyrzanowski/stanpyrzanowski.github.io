@@ -5,42 +5,50 @@
     position: relative;
     top: 0;
     right 0;
-
+    border: 5px solid transparent;
+}
+#frame:hover {
+    animation: frameAnim 5s ease-out;
 }
 /*
-#frame:before {
-    content: "";
-    width: 510px;
-    height: 280px;
-    margin: 0 auto;
-    position: absolute;
-    top: 0;
-    right 0;
-}
-#frame:before:hover {
-    animation: animate 1s linear forwards;
-    @keyframes animate
-}
-#frame:after {
-    content: "";
-    width: 510px;
-    height: 280px;
-    border: solid 3px black;
-    margin: 0 auto;
-    position: absolute;
-}
-#frame:after:hover {
-    content: "";
-    width: 510px;
-    height: 280px;
-    border: solid 3px black;
-    margin: 0 auto;
-    position: absolute;
-}
 
-
-
+#frame:hover:before {
+    content:'';
+    border: 5px solid transparent;
+}
+#frame:hover:after {
+    content:'';
+    border: 5px solid black;
 */
+/*
+}
+#frame:hover:before, #frame:hover:after {
+    transition-property: transform;
+    transition: transform 5s;
+    transform-origin: center;
+*/
+/*}*/
+@keyframes frameAnim {
+    0% {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+    }
+    50% {
+        border-top: 5px solid black;
+        border-bottom: 5px solid black;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+    }
+    100% {
+        border-top: 5px solid black;
+        border-bottom: 5px solid black;
+        border-left: 5px solid black;
+        border-right: 5px solid black;
+    }
+
+}
 
 #frame > #photo {
     width: 500px;
@@ -58,10 +66,12 @@
     opacity: 0;
     position: absolute;
 }
+
 #caption-frame:hover {
     opacity: 0.9;
     transition: 0.7s ease-in;
 }
+
 #lake {
     color: white;
     background-color: black;
@@ -78,4 +88,3 @@
     transform: translate(-50%, -50%);
     width: 100%;
 }
-

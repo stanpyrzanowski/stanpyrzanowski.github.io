@@ -21,10 +21,10 @@
 }
 #box-width-height {
     background-color: brown;
-    transition: width 2s ease-out, height 2s ease-out, background-color 2s ease-out;
+    transition: width 2s ease-out, height 2s ease-out, border 2s ease-out;
 }
 #box-width-height:hover {
     width: 400px;
     height: 400px;
-    background-color: bisque;
+    border: solid 5px black;
 }

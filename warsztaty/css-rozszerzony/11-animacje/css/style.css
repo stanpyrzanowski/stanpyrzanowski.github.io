@@ -1,0 +1,48 @@
+img {
+    height: 200px;
+    width: 200px;
+    border: solid 1px red;
+}
+.translate > img {
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    border: black 2px solid;
+    transform: translate(50%, 50%);
+    
+    
+}
+
+.tranlate {
+    background-color: aquamarine;
+    position: relative;
+}
+/*
+.scale {
+    position: absolute;
+    margin: 0 auto;
+}
+*/
+.scale img:hover {
+    transform: scale(1.2);
+    transition: 2s width ease-out;
+}
+
+.animation > img {
+    animation-name: resize;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+@keyframes resize {
+    0%, 100% {
+        height: 300px;
+    }
+    50% {
+        height: 50px;
+    }
+}
