@@ -2,7 +2,6 @@
 
 
 function pobierzDane() {
-    'use strict';
     var xhttp = new XMLHttpRequest();
 
     xhttp.open("GET", "http://echo.jsontest.com/userId/108/userName/%20Akademia108/userURL/%20akademia108.pl");
