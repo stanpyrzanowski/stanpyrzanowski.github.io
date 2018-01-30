@@ -15,32 +15,16 @@ function ajax() {
                 var data = xhttp.responseText;
 
                 var myObj = JSON.parse(data);
-
+                
                 var mainContainer = document.createElement("div");
                 mainContainer.id = 'dane-programisty';
                 document.body.appendChild(mainContainer);
 
-                var userImie = document.createElement("p");
-                var parText = document.createTextNode(myObj.imie);
-                document.getElementById("dane-programisty").appendChild(userImie);
-                userImie.appendChild(parText);
-
-                var userNazwisko = document.createElement("p");
-                var parText = document.createTextNode(myObj.nazwisko);
-                document.getElementById("dane-programisty").appendChild(userNazwisko);
-                userNazwisko.appendChild(parText);
-
-                var userZawod = document.createElement("p");
-                var parText = document.createTextNode(myObj.zawod);
-                document.getElementById("dane-programisty").appendChild(userZawod);
-                userZawod.appendChild(parText);
-
-                var userFirma = document.createElement("p");
-                var parText = document.createTextNode(myObj.firma);
-                document.getElementById("dane-programisty").appendChild(userFirma);
-                userFirma.appendChild(parText);
-
-
+                var daneProgramisty = document.createElement("p");
+                var parText = document.createTextNode(myObj.imie + ", " + myObj.nazwisko + ", " + myObj.zawod);
+                document.getElementById("dane-programisty").appendChild(daneProgramisty);
+                daneProgramisty.appendChild(parText);
+             
             }
 
             xhttp = null;
