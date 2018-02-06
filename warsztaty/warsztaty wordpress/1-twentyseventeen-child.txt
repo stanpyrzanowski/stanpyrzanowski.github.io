@@ -1,0 +1,107 @@
+0. Do materiałów dydaktycznych dołączona jest gotowa skórka potomna - plik "twentyseventeen-child.zip"
+
+
+1. Stwórz motyw potomny (child theme) dla motywu "Twentyseventeen" zgodnie z wytycznymi WP Codex https://codex.wordpress.org/Child_Themes w akapicie "Creating a Child Theme from an Unmodified Parent Theme"
+
+
+
+2. Włącz motyw w zakładce Wygląd->Motywy
+
+UWAGA - WSZYSTKIE DALSZE ZADANIA WYKONUJEMY W FOLDERZE "twentyseventeen-child"
+
+
+
+3. Stwórz plik news.php
+
+
+
+4. Do pliku page-news.php skopiuj kod z pliku page.php znajdującego się w folderze twentyseventeen/page.php. Ze skopiowanego kodu usuń kod między znacznikami <main></main>. Stwórz szablon strony "Wiadomości" - Stwórz komentarz zgodnie z opisem https://developer.wordpress.org/themes/template-files-section/page-template-files/ - akapit Creating Custom Page Templates for Global Use - taki komentarz sprawia, że plik ten będzie wykorzystywany jako niestandardowy szablon strony
+
+<?php
+ /* Template Name: Wiadomości */
+
+get_header(); ?>
+
+<div class="wrap">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+			
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+</div><!-- .wrap -->
+
+<?php get_footer();
+
+
+
+5. Stwórz stronę w panelu zarządzania (Strony -> Dodaj nową) i wybierz jako szablon "Wiadomości". Wejdź do podglądu strony - będzie zawierał header, footer - treść natomiast bedzie pusta
+
+
+
+6. W pliku functions.php twórz niestandarodwy typ postów "Wiadomości" zgodnie z instrukcją https://codex.wordpress.org/Post_Types - akapit "Custom Post Types". PAMIĘTAJ! - żeby w postach była możliwość dodwania obrazków należy w tablicy konfigurracyjnej w funkcji register_post_type() dodać 'supports' => array( 'title', 'editor', 'thumbnail')
+
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+  register_post_type( 'news',
+    array(
+      'labels' => array(
+        'name' => __( 'Wiadomości' ),
+        'singular_name' => __( 'Wiadomość' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+	  'supports' => array( 'title', 'editor', 'thumbnail')
+    )
+  );
+}
+
+
+
+7. Stwórz trzy posty typu "Wiadomości" - jako obrazki dodaj pliki domyślnie dostępne w bibliotece mediów
+
+
+
+8. W pliku news.php między znacznikami <main></main> stwórz pętlę WP_Query, która wylistuje posty typu "Wiadomości" - każdy post na liście ma zawierać obrazek postu i jego tytuł, które równocześnie mają być linkiem do treści postu. Skorzystaj ze stron https://wp-agency.co.uk/wordpress-loop-custom-post-type/, https://codex.wordpress.org/Class_Reference/WP_Query "Standard Loop (Alternate)"
+
+
+			// the query
+			<?php $the_query = new WP_Query( array( 'post_type' => 'news') ); ?>
+
+			<?php if ( $the_query->have_posts() ) : ?>
+
+				<!-- pagination here -->
+
+				<!-- the loop -->
+				<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+					<h2>
+						<a href="<?php echo get_post_permalink(); ?>"><?php the_title(); ?></a>
+					</h2>
+					<a href="<?php echo get_post_permalink(); ?>">
+						<?php echo get_the_post_thumbnail() ?>
+					</a>
+				<?php endwhile; ?>
+				<!-- end of the loop -->
+
+				<!-- pagination here -->
+
+				<?php wp_reset_postdata(); ?>
+
+			<?php else : ?>
+				<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+			<?php endif; ?>
+
+
+
+9. Dodaj stronę "Wiadomości" do menu głównego - Wygląd->Menu
+
+
+
+10. Ustaw typ adresów url w witrynie na "Nazwa wpisu" - Ustawienia -> Bezpośrednie odnośniki
+
+
+
+11. Wygląd strony "Wiadomości" powinien być analogiczny do tego na podglądzie:
+https://akademia108.pl/kurs-front-end/warsztat-wordpress-wiadomosci.png
+

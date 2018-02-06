@@ -1,0 +1,37 @@
+<?php
+
+	/* WP_query argumenty*/
+	$args = array (
+		'post_type' => 'offer', 
+		'posts_per_page' => 25 
+	);
+
+	$the_query = new WP_Query( $args ); 
+
+
+	if ( $the_query->have_posts() ) :
+
+
+		while ( $the_query->have_posts() ) : $the_query->the_post();
+
+			if ( has_post_thumbnail() && ! post_password_required() ) :
+
+				echo get_the_post_thumbnail( null, 'full' );
+
+			endif; 
+
+			the_title();
+
+			the_content(); 
+
+		endwhile;
+
+	wp_reset_postdata();
+
+	else:
+
+	 _e( 'Nie ma postów spełniających dane kryteria', 'text-domain' );
+
+	endif;
+
+?>

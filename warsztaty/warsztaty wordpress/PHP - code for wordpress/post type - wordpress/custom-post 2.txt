@@ -1,0 +1,26 @@
+<?php
+
+	function register_offer_post_type() {
+
+		$labels = array(
+			'name'               => __( 'Oferty', 'text-domain' ),
+			'singular_name'      => __( 'Oferta', 'text-domain' ) 
+		);
+
+		$supports = array( 'title', 'thumbnail', 'editor' );
+
+		$args = array(
+			'labels'              => $labels, // Etykiety dla danego typu postów
+			'description'         => __( 'Lista ofert.', 'text-domain' ), // Opis
+			'public'              => true, // Kontrola widocznoœci tego typu postów
+			'has_archive'         => true, // Czy dany typ postów ma archiwum
+			'rewrite'             => array( 'slug' => 'offer' ), // Slug postów tego typu
+			'supports'            => $supports
+		);
+
+		register_post_type( 'offer', $args ); // Rejestracja postów o typie offer
+	}
+
+	add_action( 'init', 'register_offer_post_type' );
+
+?>
